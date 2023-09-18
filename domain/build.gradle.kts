@@ -33,5 +33,10 @@ android {
 }
 
 dependencies {
+    //unitTest
+    testImplementation(Dependency.UnitTest.JUNIT)
 
+    //androidTest
+    androidTestImplementation(Dependency.AndroidTest.ANDROID_JUNIT)
+    androidTestImplementation(Dependency.AndroidTest.ESPRESSO_CORE)
 }
