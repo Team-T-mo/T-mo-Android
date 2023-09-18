@@ -1,7 +1,8 @@
-package com.example.tmo
+package com.example.tmo.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tmo.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
