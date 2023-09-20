@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -43,6 +45,10 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":di"))
 
+    //hilt
+    implementation(Dependency.Google.HILT_ANDROID)
+    kapt(Dependency.Google.HILT_ANDROID_COMPILER)
+
     //androidx
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APP_COMPAT)
@@ -55,4 +61,12 @@ dependencies {
     //androidTest
     androidTestImplementation(Dependency.AndroidTest.ANDROID_JUNIT)
     androidTestImplementation(Dependency.AndroidTest.ESPRESSO_CORE)
+
+    //lifecycle
+    implementation(Dependency.AndroidX.LIFECYCLE_VIEWMODEL_KTX)
+    implementation(Dependency.AndroidX.LIFECYCLE_RUNTIME)
+    implementation(Dependency.AndroidX.LIFECYCLE_LIVEDATA_KTX)
+
+    implementation(Dependency.AndroidX.ACTIVITY_KTX)
+
 }
