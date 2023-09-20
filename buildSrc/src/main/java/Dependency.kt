@@ -6,7 +6,7 @@ object Dependency {
 
         const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
         const val APP_COMPAT = "androidx.appcompat:appcompat:${Versions.APP_COMPAT}"
-        const val MATERIAL = "com.google.android.material:${Versions.MATERIAL}"
+        const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
 
         const val ACTIVITY_KTX = "androidx.activity:activity-ktx:${Versions.ACTIVITY_KTX}"
         const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.FRAGMENT_KTX}"
