@@ -1,6 +1,7 @@
 package com.example.di.modules
 
 import android.util.Log
+import com.example.data.remote.api.DetailSearchApi
 import com.example.data.remote.api.SearchApi
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -64,5 +65,11 @@ object NetworkModule {
     fun provideSearch(
         retrofit: Retrofit
     ): SearchApi = retrofit.create(SearchApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideDetailSearch(
+        retrofit: Retrofit
+    ): DetailSearchApi = retrofit.create(DetailSearchApi::class.java)
 }
 

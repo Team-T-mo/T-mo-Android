@@ -1,5 +1,7 @@
 package com.example.di.modules
 
+import com.example.data.remote.datasource.DetailSearchDataSource
+import com.example.data.remote.datasource.DetailSearchDataSourceImpl
 import com.example.data.remote.datasource.SearchDataSource
 import com.example.data.remote.datasource.SearchDataSourceImpl
 import dagger.Binds
@@ -15,4 +17,9 @@ abstract class RemoteDatasourceModule {
     abstract fun bindSearchDataSource(
         searchDataSourceImpl: SearchDataSourceImpl
     ): SearchDataSource
+
+    @Binds
+    abstract fun bindDetailDataSource(
+        detailSearchDataSourceImpl: DetailSearchDataSourceImpl
+    ): DetailSearchDataSource
 }

@@ -1,6 +1,8 @@
 package com.example.di.modules
 
+import com.example.data.repository.DetailSearchRepositoryImpl
 import com.example.data.repository.SearchRepositoryImpl
+import com.example.domain.repository.DetailSearchRepository
 import com.example.domain.repository.SearchRepository
 import dagger.Binds
 import dagger.Module
@@ -15,4 +17,9 @@ abstract class RepositoryModule {
     abstract fun bindSearchRepository(
         searchRepositoryImpl: SearchRepositoryImpl
     ): SearchRepository
+
+    @Binds
+    abstract fun bindDetailSearchRepository(
+        detailSearchRepositoryImpl: DetailSearchRepositoryImpl
+    ): DetailSearchRepository
 }

@@ -13,6 +13,7 @@ data class ResultItem(
 )
 
 data class Record(
+    @SerializedName("id") val id: Int,
     @SerializedName("name") val name: String,
     @SerializedName("default_photo") val defaultPhoto: DefaultPhoto,
     @SerializedName("rank") val rank: String,
@@ -27,7 +28,7 @@ data class DefaultPhoto(
 fun SearchResponse.toEntity(): SearchEntity {
     val record = results.firstOrNull()?.record // 첫 번째 ResultItem 사용
     return SearchEntity(
-        id = totalResults,
+        id = record?.id ?: 0,
         name = record?.name ?: "",
         rank = record?.rank ?: "",
         iconicTaxonName = record?.iconicTaxonName ?: "",

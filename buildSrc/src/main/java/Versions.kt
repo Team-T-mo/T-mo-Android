@@ -26,7 +26,7 @@ object Versions {
     const val PREFERENCE_KTX = "1.2.0"
     const val VIEWPAGER_2 = "1.0.0"
 
-    const val HILT = "2.45"
+    const val HILT = "2.48"
     const val MATERIAL = "1.9.0"
     const val GMS_PLAY_SERVICE_AUTH = "19.0.0"
     const val FIREBASE = "21.0.3"
