@@ -68,5 +68,4 @@ dependencies {
     implementation(Dependency.AndroidX.LIFECYCLE_LIVEDATA_KTX)
 
     implementation(Dependency.AndroidX.ACTIVITY_KTX)
-
 }
