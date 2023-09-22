@@ -17,6 +17,7 @@ data class DetailSearchEntity(
     val establishmentMeansPlace: String,
     val observationsCount: Int,
     val preferredEstablishmentMeans: String,
-    val wikipediaSummary: String
+    val wikipediaSummary: String,
+    val wikipediaUrl: String
 )
 

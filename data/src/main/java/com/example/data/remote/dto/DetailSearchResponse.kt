@@ -27,7 +27,8 @@ data class Taxon(
     @SerializedName("establishment_means") val establishmentMeans: EstablishmentMeans,
     @SerializedName("observations_count") val observationsCount: Int,
     @SerializedName("preferred_establishment_means") val preferredEstablishmentMeans: String,
-    @SerializedName("wikipedia_summary") val wikipediaSummary: String
+    @SerializedName("wikipedia_summary") val wikipediaSummary: String,
+    @SerializedName("wikipedia_url") val wikipediaUrl: String
 )
 
 data class Color(
@@ -80,6 +81,7 @@ fun DetailSearchResponse.toEntity(): DetailSearchEntity {
         establishmentMeansPlace = taxon?.establishmentMeans?.place?.name ?: "",
         observationsCount = taxon?.observationsCount ?: 0,
         preferredEstablishmentMeans = taxon?.preferredEstablishmentMeans ?: "",
-        wikipediaSummary = taxon?.wikipediaSummary ?: ""
+        wikipediaSummary = taxon?.wikipediaSummary ?: "",
+        wikipediaUrl = taxon?.wikipediaUrl ?: ""
     )
 }

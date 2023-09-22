@@ -6,5 +6,5 @@ import javax.inject.Inject
 class DetailSearchUseCase @Inject constructor(
     private val detailSearchRepository: DetailSearchRepository
 ) {
-    suspend fun getDetailSearch(id: Int) = detailSearchRepository.detailSearch(id)
+    suspend operator fun invoke(id: Int) = detailSearchRepository.detailSearch(id)
 }
