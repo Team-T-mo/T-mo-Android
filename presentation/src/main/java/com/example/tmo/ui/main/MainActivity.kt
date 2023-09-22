@@ -15,25 +15,9 @@ import java.net.URLDecoder
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
-    private val viewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val test = findViewById<TextView>(R.id.test)
-
-        test.setOnClickListener {
-            viewModel.getSearchList(49158)
-        }
-
-        lifecycleScope.launch {
-            viewModel.detailSearchList.collect { detailSearchData ->
-
-
-            }
-        }
     }
 }
