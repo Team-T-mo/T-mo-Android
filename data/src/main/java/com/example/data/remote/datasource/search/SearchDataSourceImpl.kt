@@ -1,9 +1,8 @@
-package com.example.data.remote.datasource
+package com.example.data.remote.datasource.search
 
-import android.util.Log
 import com.example.data.remote.api.SearchApi
+import com.example.data.remote.datasource.search.SearchDataSource
 import com.example.data.remote.dto.SearchResponse
-import com.example.domain.repository.SearchRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

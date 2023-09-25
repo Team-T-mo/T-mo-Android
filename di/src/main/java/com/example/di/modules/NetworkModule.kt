@@ -3,6 +3,7 @@ package com.example.di.modules
 import android.util.Log
 import com.example.data.remote.api.DetailSearchApi
 import com.example.data.remote.api.SearchApi
+import com.example.data.remote.api.WikipediaApi
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
@@ -13,6 +14,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -49,7 +51,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRetrofitInstance(
+    fun provideSearchRetrofitInstance(
         okHttpClient: OkHttpClient,
         gsonConverterFactory: GsonConverterFactory,
     ): Retrofit {
@@ -71,5 +73,26 @@ object NetworkModule {
     fun provideDetailSearch(
         retrofit: Retrofit
     ): DetailSearchApi = retrofit.create(DetailSearchApi::class.java)
+
+    @Provides
+    @Singleton
+    @Named("WikipediaApi")
+    fun provideWikipediaRetrofitInstance(
+        okHttpClient: OkHttpClient,
+        gsonConverterFactory: GsonConverterFactory,
+    ): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl("https://ko.wikipedia.org/")
+            .client(okHttpClient)
+            .addConverterFactory(gsonConverterFactory)
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    @Named("WikipediaApi")
+    fun provideWikipedia(
+        @Named("WikipediaApi") retrofit: Retrofit
+    ): WikipediaApi = retrofit.create(WikipediaApi::class.java)
 }
 

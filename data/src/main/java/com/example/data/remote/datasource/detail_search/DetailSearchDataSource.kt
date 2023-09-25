@@ -1,4 +1,4 @@
-package com.example.data.remote.datasource
+package com.example.data.remote.datasource.detail_search
 
 import com.example.data.remote.dto.DetailSearchResponse
 import kotlinx.coroutines.flow.Flow

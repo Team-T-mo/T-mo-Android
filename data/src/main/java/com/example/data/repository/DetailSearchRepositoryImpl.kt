@@ -1,6 +1,6 @@
 package com.example.data.repository
 
-import com.example.data.remote.datasource.DetailSearchDataSource
+import com.example.data.remote.datasource.detail_search.DetailSearchDataSource
 import com.example.data.remote.dto.toEntity
 import com.example.domain.entity.DetailSearchEntity
 import com.example.domain.repository.DetailSearchRepository
