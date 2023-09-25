@@ -1,7 +1,6 @@
 package com.example.data.repository
 
-import android.util.Log
-import com.example.data.remote.datasource.SearchDataSource
+import com.example.data.remote.datasource.search.SearchDataSource
 import com.example.domain.entity.SearchEntity
 import com.example.data.remote.dto.toEntity
 import com.example.domain.repository.SearchRepository

@@ -1,4 +1,4 @@
-package com.example.data.remote.datasource
+package com.example.data.remote.datasource.search
 
 import com.example.data.remote.dto.SearchResponse
 import com.example.domain.repository.SearchRepository
