@@ -1,4 +1,4 @@
-package com.example.domain.entity
+package com.example.domain.entity.detail_search
 
 data class DetailSearchEntity(
     val id: Int,

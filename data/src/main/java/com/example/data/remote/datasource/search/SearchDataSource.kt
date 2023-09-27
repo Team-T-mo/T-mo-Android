@@ -1,7 +1,6 @@
 package com.example.data.remote.datasource.search
 
-import com.example.data.remote.dto.SearchResponse
-import com.example.domain.repository.SearchRepository
+import com.example.data.remote.dto.search.SearchResponse
 import kotlinx.coroutines.flow.Flow
 
 interface SearchDataSource {

@@ -1,6 +1,6 @@
 package com.example.data.remote.datasource.detail_search
 
-import com.example.data.remote.dto.DetailSearchResponse
+import com.example.data.remote.dto.detail_search.DetailSearchResponse
 import kotlinx.coroutines.flow.Flow
 
 interface DetailSearchDataSource {

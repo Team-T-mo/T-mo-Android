@@ -1,6 +1,6 @@
-package com.example.data.remote.dto
+package com.example.data.remote.dto.detail_search
 
-import com.example.domain.entity.DetailSearchEntity
+import com.example.domain.entity.detail_search.DetailSearchEntity
 import com.google.gson.annotations.SerializedName
 
 data class DetailSearchResponse(

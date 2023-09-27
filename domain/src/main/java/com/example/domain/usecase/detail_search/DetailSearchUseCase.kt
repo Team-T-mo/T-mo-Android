@@ -1,4 +1,4 @@
-package com.example.domain.usecase
+package com.example.domain.usecase.detail_search
 
 import com.example.domain.repository.DetailSearchRepository
 import javax.inject.Inject
