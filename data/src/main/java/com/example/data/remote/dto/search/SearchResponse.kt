@@ -1,6 +1,6 @@
-package com.example.data.remote.dto
+package com.example.data.remote.dto.search
 
-import com.example.domain.entity.SearchEntity
+import com.example.domain.entity.search.SearchEntity
 import com.google.gson.annotations.SerializedName
 
 data class SearchResponse(

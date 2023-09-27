@@ -1,6 +1,6 @@
-package com.example.data.remote.dto
+package com.example.data.remote.dto.wikipedia
 
-import com.example.domain.entity.WikipediaEntity
+import com.example.domain.entity.wikipedia.WikipediaEntity
 import com.google.gson.annotations.SerializedName
 
 data class WikipediaResponse(
@@ -19,7 +19,7 @@ data class Page(
     @SerializedName("extract") val extract: String
 )
 
-fun WikipediaResponse.toEntity() : WikipediaEntity {
+fun WikipediaResponse.toEntity(): WikipediaEntity {
     val firstPage = query.pages.values.firstOrNull()
     val content = firstPage?.extract ?: ""
     return WikipediaEntity(

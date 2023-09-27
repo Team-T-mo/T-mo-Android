@@ -1,8 +1,8 @@
 package com.example.data.repository
 
 import com.example.data.remote.datasource.search.SearchDataSource
-import com.example.domain.entity.SearchEntity
-import com.example.data.remote.dto.toEntity
+import com.example.domain.entity.search.SearchEntity
+import com.example.data.remote.dto.search.toEntity
 import com.example.domain.repository.SearchRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

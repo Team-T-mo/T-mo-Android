@@ -1,4 +1,4 @@
-package com.example.domain.usecase
+package com.example.domain.usecase.wikipedia
 
 import com.example.domain.repository.WikipediaRepository
 import javax.inject.Inject
